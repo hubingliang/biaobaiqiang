@@ -4,12 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=https://hubingliang.github.io/Confession-wall/dist/">
+
     <title>天农表白墙</title>
 </head>
 
 <body>
-
+    <script>
+        function IsPC() {
+            var userAgentInfo = navigator.userAgent;
+            var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"
+            ];
+            var flag = true;
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        }
+        var flag = IsPC()
+        if (flag === true) {
+            window.location.href = "https://hubingliang.github.io/Confession-wall/dist/";
+        } else {
+            alert('手机还访问不了这个页面')
+        }
+    </script>
 </body>
 
 </html>
